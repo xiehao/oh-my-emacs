@@ -8,13 +8,20 @@
 (menu-bar-mode t)
 
 ;;; You email address
-(setq user-mail-address "xiaohanyu1988@gmail.com")
+(setq user-mail-address "xiehao@zju.edu.cn")
+
+;; For Mac users, setup environment variables from the user's shell
+;; (when (memq window-system '(mac ns))
+;;   (exec-path-from-shell-initialize))
+
+;; Window switching, using Meta + direction
+(windmove-default-keybindings 'meta)
 
 ;;; Calendar settings
 ;; you can use M-x sunrise-sunset to get the sun time
 (setq calendar-latitude 39.9)
 (setq calendar-longitude 116.3)
-(setq calendar-location-name "Beijing, China")
+(setq calendar-location-name "Hangzhou, China")
 
 ;;; Time related settings
 ;; show time in 24hours format
@@ -62,3 +69,10 @@ inversion of gas-comment-region"
           (delete-char 1))
       (next-line))
     (goto-char end)))
+
+;; Enable X clipboard
+(setq x-select-enable-clipboard t)
+(setq x-select-enable-primary t)
+
+;; Org-mode shift select
+(setq org-support-shift-select t)

@@ -266,7 +266,9 @@ still use org-mode 7.x, you may need to [[http://orgmode.org/worg/org-tutorials/
             ("frame" "lines")
             ("framesep" "2mm")))
     (setq org-latex-pdf-process
-          '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))))
+;;        '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")
+          (list "latexmk -xelatex -f %f")
+          )))
 #+END_SRC
 
 * Org-CDLaTeX
