@@ -556,14 +556,14 @@ Some commonly used keybindings for =w3m-mode=:
 
 #+NAME: emacs-w3m
 #+BEGIN_SRC emacs-lisp
-(defun ome-emacs-w3m-setup ()
-  ;; (setq w3m-default-display-inline-images t)
-  (setq w3m-home-page "http://www.google.com/ncr")
-  (setq browse-url-browser-function 'w3m-browse-url)
-  (global-set-key (kbd "C-x w") 'browse-url-at-point))
+  ;; (defun ome-emacs-w3m-setup ()
+  ;;   ;; (setq w3m-default-display-inline-images t)
+  ;;   (setq w3m-home-page "http://www.google.com/ncr")
+  ;;   (setq browse-url-browser-function 'w3m-browse-url)
+  ;;   (global-set-key (kbd "C-x w") 'browse-url-at-point))
 
-(when (executable-find "w3m")
-  (ome-install 'emacs-w3m))
+  ;; (when (executable-find "w3m")
+  ;;   (ome-install 'emacs-w3m))
 #+END_SRC
 
 * Quickrun
